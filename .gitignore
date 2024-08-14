@@ -1,0 +1,57 @@
+# Archivos y carpetas de Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+env/
+venv/
+*.env
+
+# Archivos de configuración de entornos
+.env
+.venv
+.envrc
+
+# Archivos generados por el sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de base de datos
+*.sqlite3
+*.db
+
+# Archivos de migración
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+
+# Carpeta de configuración de Django
+*.local
+*.db
+*.sqlite3
+*.pyo
+
+# Archivos de build
+build/
+dist/
+*.egg-info/
+
+# Carpeta de Django para archivos de colecciones estáticas
+staticfiles/
+
+# Archivos temporales de editor
+*.swp
+*.swo
+*.swn
+*.tmp
+*.bak
+
+# Carpeta de usuario
+.idea/
+.vscode/
+
+# Entorno virtual
+env/
+venv/
