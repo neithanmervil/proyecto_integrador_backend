@@ -13,12 +13,12 @@ class Dispositivo(models.Model):
         db_table = 'dispositivos_info'
 
     def __str__(self):
-        return self.nombre_dispositivo
+        return f'{self.id} - {self.nombre_dispositivo} - {self.descripcion} - {self.esta_disponible}'
 
 class Prestamo(models.Model):
     nombre_estudiante = models.CharField(max_length=100)
     telefono_estudiante = models.CharField(max_length=15)
-    dispositivo = models.ForeignKey(Dispositivo, related_name='prestamos', on_delete=models.CASCADE, null=True, blank=True)
+    dispositivo = models.ForeignKey(Dispositivo, related_name='prestamos', on_delete=models.CASCADE, null=False, blank=True)
     fecha_prestamo = models.DateField()
     fecha_devolucion = models.DateField()
     
@@ -26,4 +26,4 @@ class Prestamo(models.Model):
         db_table = 'prestamos_info'    
 
     def __str__(self):
-        return f'{self.nombre_estudiante} - {self.dispositivo}'
+        return f'{self.nombre_estudiante} - {self.telefono_estudiante} - {self.dispositivo}- {self.fecha_prestamo}- {self.fecha_devolucion}'
